@@ -76,28 +76,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
   if ($emailNotifications == 1) {
   $sql = "insert into task(user_id,project_id,task_title,task_description,due_date,status)values('$selectedUserId','$id','$tasktitle','$descriptionname','$duedate','todo')";
   $result = mysqli_query($con, $sql);
-  $apiKey = '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';
-  $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
-  $apiInstance = new TransactionalEmailsApi(null, $config);
-  $emailParams = [
-  'sender' => ['email' => 'taskmasterapp01@gmail.com'],
-  'to' => [['email' => $memberemail]],
-  'subject' => 'TASK MASTER:New Task Assigned',
-  'htmlContent' => '
-  <p>Dear '.$membername.',</p>
-  <p>I hope this email finds you well. Your manager has assigned new task for you. Below are the details of the tasks:</p>
-  <p><strong>Task Title:</strong>'. $tasktitle.'</p>
-  <p><strong>Assigned By:</strong>'.$_SESSION['user_info']['username'].'</p>
-  <p><strong>Deadline:</strong>'.$duedate.'</p>
-  <p><strong>Description:</strong>'.$descriptionname.'</p>
-  <p>Please review the task and make sure to understand the requirements and deadlines. If you have any questions or need clarifications, don\'t hesitate to reach out to your manager for further assistance.</p>
-  <p>We trust in your abilities to successfully complete these task. Your contributions are valuable to the team, and we appreciate your dedication.</p>
-  <p>Thank you for your attention to this matter.</p>
-  <p>Best regards,</p>
-  <p>'.$_SESSION['user_info']['username'].'</p>
-  <p>[Manager]</p>'
-  ];
-  $response = $apiInstance->sendTransacEmail($emailParams);}}
+    // l sendinblue api ma byzbat nazlo github, service provider's api,
+ // $apiKey = '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';
+//  $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
+//  $apiInstance = new TransactionalEmailsApi(null, $config);
+//  $emailParams = [
+//  'sender' => ['email' => 'taskmasterapp01@gmail.com'],
+//  'to' => [['email' => $memberemail]],
+//  'subject' => 'TASK MASTER:New Task Assigned',
+//  'htmlContent' => '
+//  <p>Dear '.$membername.',</p>
+//  <p>I hope this email finds you well. Your manager has assigned new task for you. Below are the details of the tasks:</p>
+//  <p><strong>Task Title:</strong>'. $tasktitle.'</p>
+//  <p><strong>Assigned By:</strong>'.$_SESSION['user_info']['username'].'</p>
+//  <p><strong>Deadline:</strong>'.$duedate.'</p>
+//  <p><strong>Description:</strong>'.$descriptionname.'</p>
+//  <p>Please review the task and make sure to understand the requirements and deadlines. If you have any questions or need clarifications, don\'t hesitate to reach out to your manager for further assistance.</p>
+//  <p>We trust in your abilities to successfully complete these task. Your contributions are valuable to the team, and we appreciate your dedication.</p>
+//  <p>Thank you for your attention to this matter.</p>
+//  <p>Best regards,</p>
+//  <p>'.$_SESSION['user_info']['username'].'</p>
+//  <p>[Manager]</p>'
+//  ];
+//  $response = $apiInstance->sendTransacEmail($emailParams);}}
   header("Location: panel.php?action=viewproject&id=$id");
   die;
 }
