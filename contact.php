@@ -17,27 +17,27 @@ exit();  }
  $cssbutton = ($row['color_scheme'] === 'dark') ? 'darkbutton' : 'lightbutton';}
  use SendinBlue\Client\Configuration;
  use SendinBlue\Client\Api\TransactionalEmailsApi;
-
- $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', API_KEY);
- $apiInstance = new TransactionalEmailsApi(null, $config);
+// l sendinblue api ma byzbat nazlo github, service provider's api,
+ //$config = Configuration::getDefaultConfiguration()->setApiKey('api-key', API_KEY);
+// $apiInstance = new TransactionalEmailsApi(null, $config);
  
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     $name = $_POST['name'];
-     $email = $_POST['email'];
-     $message = $_POST['message'];
-     $emailParams = [
-         'sender' => ['name' => $name, 'email' => $email],
-         'to' => [['email' => 'taskmasterapp01@gmail.com']],
-         'subject' => 'Your Email Subject',
-         'htmlContent' => '<p>Name: '.$name.'</p><p>Email: '.$email.'</p><p>Message: '.$message.'</p>'
-     ];
-     $response = $apiInstance->sendTransacEmail($emailParams);
-     if ($response->getMessageId()) {
-         $successMessage = 'Email sent successfully.';
-     } else {
-         $errorMessage = 'Failed to send email.' ;
-     }
- }
+ //if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ //    $name = $_POST['name'];
+ //    $email = $_POST['email'];
+ //    $message = $_POST['message'];
+ //    $emailParams = [
+ //        'sender' => ['name' => $name, 'email' => $email],
+ //        'to' => [['email' => 'taskmasterapp01@gmail.com']],
+ //        'subject' => 'Your Email Subject',
+ //        'htmlContent' => '<p>Name: '.$name.'</p><p>Email: '.$email.'</p><p>Message: '.$message.'</p>'
+ //    ];
+ //    $response = $apiInstance->sendTransacEmail($emailParams);
+ //    if ($response->getMessageId()) {
+ //        $successMessage = 'Email sent successfully.';
+  //   } else {
+  //       $errorMessage = 'Failed to send email.' ;
+  //   }
+// }
  ?>
 
 <!DOCTYPE html>
