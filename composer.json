@@ -1,0 +1,7 @@
+{
+    "require": {
+        "sendinblue/api-v3-sdk": "8.x.x",
+        "tecnickcom/tcpdf": "^6.6"
+        
+    }
+}
