@@ -1,4 +1,5 @@
 <?php
+require_once 'config.php';
 require("vendor/autoload.php");
 session_start();
 include('dbconfig/connect.php');
@@ -16,9 +17,8 @@ exit();  }
  $cssbutton = ($row['color_scheme'] === 'dark') ? 'darkbutton' : 'lightbutton';}
  use SendinBlue\Client\Configuration;
  use SendinBlue\Client\Api\TransactionalEmailsApi;
- 
- $apiKey = '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';
- $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
+
+ $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', API_KEY);
  $apiInstance = new TransactionalEmailsApi(null, $config);
  
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
