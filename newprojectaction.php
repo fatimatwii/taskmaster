@@ -47,30 +47,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if ($row = mysqli_fetch_assoc($notificationsresult)) {
       $emailNotifications = $row['email_notifications'];
       if ($emailNotifications == 1) {
-     $apiKey = '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';
+        // l sendinblue api ma byzbat nazlo github, service provider's api,
+   //  $apiKey = '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';
      // Create a configuration object
-     $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
-     $apiInstance = new TransactionalEmailsApi(null, $config);
-     $emailParams = [
-     'sender' => ['email' => 'taskmasterapp01@gmail.com'],
-     'to' => [['email' => $memberemail]],
-     'subject' => 'TASK MASTER:New Project Assignment',
-     'htmlContent' => '
-     <p>Dear '.$membername.',</p>
-     <p>I hope this email finds you well. I wanted to inform you that a new project has been assigned to you. Below are the details of the project:</p>
-      <p><strong>Project Name:</strong>'. $name.'</p>
-      <p><strong>Assigned By:</strong>'.$_SESSION['user_info']['username'].'</p>
-      <p><strong>Start Date:</strong>'.$start_date.'</p>
-      <p><strong>Deadline:</strong>'.$end_date.'</p>
-      <p><strong>Description:</strong>'.$description.'</p>
-      <p>Please review the project details and make sure to familiarize yourself with the project requirements and objectives. If you have any questions or need clarifications, don\'t hesitate to reach out to your manager or the assigned project team.</p>
-      <p>We trust in your skills and expertise to successfully execute this project. We appreciate your commitment and dedication in contributing to our team\'s success.</p>
-      <p>Thank you for your attention to this matter.</p>
-      <p>Best regards,</p>
-      <p>'.$_SESSION['user_info']['username'].'</p>
-      <p>[Community Admin]</p>'
-  ];
-  $response = $apiInstance->sendTransacEmail($emailParams);}}
+    // $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
+    // $apiInstance = new TransactionalEmailsApi(null, $config);
+    // $emailParams = [
+     //'sender' => ['email' => 'taskmasterapp01@gmail.com'],
+    // 'to' => [['email' => $memberemail]],
+   //  'subject' => 'TASK MASTER:New Project Assignment',
+   //  'htmlContent' => '
+   //  <p>Dear '.$membername.',</p>
+   //  <p>I hope this email finds you well. I wanted to inform you that a new project has been assigned to you. Below are the details of the project:</p>
+    //  <p><strong>Project Name:</strong>'. $name.'</p>
+    //  <p><strong>Assigned By:</strong>'.$_SESSION['user_info']['username'].'</p>
+    //  <p><strong>Start Date:</strong>'.$start_date.'</p>
+    //  <p><strong>Deadline:</strong>'.$end_date.'</p>
+    //  <p><strong>Description:</strong>'.$description.'</p>
+    //  <p>Please review the project details and make sure to familiarize yourself with the project requirements and objectives. If you have any questions or need clarifications, don\'t hesitate to reach out to your manager or the assigned project team.</p>
+    //  <p>We trust in your skills and expertise to successfully execute this project. We appreciate your commitment and dedication in contributing to our team\'s success.</p>
+    //  <p>Thank you for your attention to this matter.</p>
+     // <p>Best regards,</p>
+     // <p>'.$_SESSION['user_info']['username'].'</p>
+    //  <p>[Community Admin]</p>'
+  //];
+  //$response = $apiInstance->sendTransacEmail($emailParams);}}
   }
   }
   // email ll manager
@@ -80,29 +81,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($row = mysqli_fetch_assoc($notificationsresult)) {
     $emailNotifications = $row['email_notifications'];
     if ($emailNotifications == 1) {
-    $apiKey = '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';
-    $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
-    $apiInstance = new TransactionalEmailsApi(null, $config);
-    $emailParams = [
-      'sender' => ['email' => 'taskmasterapp01@gmail.com'],
-      'to' => [['email' => $manageremail]],
-      'subject' => 'TASK MASTER:New Project Assignment',
-      'htmlContent' => '
-        <p>Dear '.$managername.',</p>
-        <p>I hope this email finds you well. I would like to inform you that a new project has been assigned to our team. Below are the details of the project:</p>
-        <p><strong>Project Name:</strong>'. $name.'</p>
-        <p><strong>Assigned By:</strong>'.$_SESSION['user_info']['username'].'</p>
-        <p><strong>Start Date:</strong>'.$start_date.'</p>
-        <p><strong>Deadline:</strong>'.$end_date.'</p>
-        <p><strong>Description:</strong>'.$description.'</p>
-        <p>As the manager of our team, I kindly request your support and guidance in successfully executing this project. Your expertise and leadership will be instrumental in achieving the project goals.</p>
-        <p>Please let me know if you have any questions or need further information regarding the project. I look forward to your valuable insights and guidance throughout the project\'s duration.</p>
-        <p>Thank you for your attention to this matter.</p>
-        <p>Best regards,</p>
-        <p>'.$_SESSION['user_info']['username'].'</p>
-        <p>[Community Admin]</p>'
-    ];
-    $response = $apiInstance->sendTransacEmail($emailParams);}}
+      // l sendinblue api ma byzbat nazlo github, service provider's api,
+  //  $apiKey = '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';
+   // $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
+  //  $apiInstance = new TransactionalEmailsApi(null, $config);
+  //  $emailParams = [
+  //    'sender' => ['email' => 'taskmasterapp01@gmail.com'],
+  //    'to' => [['email' => $manageremail]],
+  //    'subject' => 'TASK MASTER:New Project Assignment',
+  //    'htmlContent' => '
+  //      <p>Dear '.$managername.',</p>
+   //     <p>I hope this email finds you well. I would like to inform you that a new project has been assigned to our team. Below are the details of the project:</p>
+   //     <p><strong>Project Name:</strong>'. $name.'</p>
+   //     <p><strong>Assigned By:</strong>'.$_SESSION['user_info']['username'].'</p>
+    //    <p><strong>Start Date:</strong>'.$start_date.'</p>
+    //    <p><strong>Deadline:</strong>'.$end_date.'</p>
+    //    <p><strong>Description:</strong>'.$description.'</p>
+   //     <p>As the manager of our team, I kindly request your support and guidance in successfully executing this project. Your expertise and leadership will be instrumental in achieving the project goals.</p>
+   //     <p>Please let me know if you have any questions or need further information regarding the project. I look forward to your valuable insights and guidance throughout the project\'s duration.</p>
+   //     <p>Thank you for your attention to this matter.</p>
+   //     <p>Best regards,</p>
+   //     <p>'.$_SESSION['user_info']['username'].'</p>
+   //     <p>[Community Admin]</p>'
+//    ];
+ //   $response = $apiInstance->sendTransacEmail($emailParams);}}
     header("Location: panel.php");
     exit();
   } else {
