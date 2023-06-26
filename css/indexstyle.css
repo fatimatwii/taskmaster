@@ -1,0 +1,93 @@
+body{
+  background-color: #c26192d0;
+  color: white;
+  margin: auto;
+}
+/*header sentence*/
+.header{ 
+  position: relative;
+  padding: 4% 0% 4% 0%;
+  font-family: Lucida Handwriting;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.row{
+  margin-right: 0%;
+}
+/*title section*/
+.big-heading {
+  position: relative;
+  padding: 5% 0% 1% 5%;
+}
+/*welcome*/
+.flex1{
+  display: flex;
+  flex-direction: column;
+}
+.big-heading h1{
+  font-family: "Montserrat-Black";
+  font-size: 3rem;
+}
+.big-heading p{
+ margin-left:4%;
+  font-size: 1rem;
+}
+/*tasks image*/
+.title-image {
+  width: 90%;
+  padding-left: 5%;margin-left: 5%;
+  padding-top:4%;
+ }
+/*forms*/
+.form-group {
+  margin: auto;
+  margin-top: 3%;
+  padding-left: 25%;
+}
+.text{
+  padding-top: 2%;
+  font-size: 0.4 rem;
+  margin: auto;
+  padding-left: 25%;
+}
+a{
+  color: white !important;
+}
+a:hover{
+  color: #b60155 !important;
+}
+.log{
+  position: relative;
+  margin-top: 20%;
+ }
+.sign{
+ position: relative;
+ margin-top: 5%;
+}
+/*buttons*/
+.log-btn{
+ position: relative;
+ margin: 3% 0% 2% 40%;cursor: pointer;;
+}
+input[type="text"],input[type="email"],input[type="password"] {
+    width: 065%;
+}
+.task-details-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 5%;padding-left: 7%;
+  z-index: 9999;
+}
+.tab-content > .tab-pane {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}

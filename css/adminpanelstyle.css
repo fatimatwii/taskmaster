@@ -1,0 +1,140 @@
+body{
+  background-color: #f8f8fa;height: 80vh;
+}
+button{
+  margin-top: 2%;
+  background-color: #f855a6d0 !important;
+  border-radius: 5%;
+}
+ button:hover{
+  background-color: #b60155 !important ;
+}
+.project-card {
+  transition: all 0.3s ease-in-out;
+}
+.project-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transform: scale(1.05);
+}
+.project-details {
+  display: none;
+}
+.expanded .project-details {
+  display: block;
+}
+.containerview {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 5%;
+   margin-top: 3%;
+}
+.up {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  height: 40%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.column {
+  flex-basis: 50%;
+}
+.column h5,.column h6{
+  font-style: oblique;
+}
+.column h5,.column h6,
+.column p {
+  margin-left: 3%;
+}
+.down {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
+.left {
+  flex-basis: 30%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(134, 133, 133, 0.3);
+  height: max-content;
+}
+
+.right {
+  margin-left: 2%;
+  flex-basis: 68%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(134, 133, 133, 0.3);
+  height: max-content;
+}
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+  padding: 10px;
+}
+
+.task-table th {
+  background-color: #e2e2e2;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.task-table tr:hover {
+  background-color: #d8d8d8;
+}
+
+.line-through{
+  text-decoration: line-through;
+}
+.late{
+  color:red;
+}
+.edit-form {
+  text-align: center;
+}
+.statusclick:hover{
+  transform: scale(1.2);
+}
+
+.form-title {
+  margin-top: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-column {
+  flex: 1;
+  margin: 2% 2%;
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+textarea.edit-description {
+  width: 60% !important;
+}
+
+.form-row .form-column:last-child {
+  text-align: right;
+}
+
+.form-row:last-child {
+  margin-top: 20px;
+}
+
+.form-row:last-child .form-column {
+  display: inline-block;
+}
+
